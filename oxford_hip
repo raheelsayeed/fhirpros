@@ -1,0 +1,129 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "SMART-PROMs-QUE4",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2017-07-12T16:33:13.000+00:00",
+    "tag": [
+      {
+        "system": "https://smarthealthit.org/tags",
+        "code": "pro-7-2017"
+      }
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">The Oxford Hip Score (OHS)</div>"
+  },
+  "identifier": [
+    {
+      "use": "official",
+      "system": "https://innovation.ox.ac.uk/outcome-measures/oxford-hip-score-ohs/",
+      "value": "The Oxford Hip Score (OHS)"
+    }
+  ],
+  "status": "active",
+  "item": [
+    {
+      "linkId": "Usual pain",
+      "text": "How would you describe the pain you usually have in your hip?",
+      "type": "choice",
+      "options": {
+        "reference": "ValueSet/SMART-PROMs-VS13"
+      }
+    },
+    {
+      "linkId": "Sudden pain",
+      "text": "Have you had any sudden, severe pain (shooting, stabbing, or spasms) from your affected hip?",
+      "type": "choice",
+      "options": {
+        "reference": "ValueSet/SMART-PROMs-VS15"
+      }
+    },
+    {
+      "linkId": "Night pain",
+      "text": "Have you been troubled by pain from your hip in bed at night?",
+      "type": "choice",
+      "options": {
+        "reference": "ValueSet/SMART-PROMs-VS14"
+      }
+    },
+    {
+      "linkId": "Washing",
+      "text": "Have you had any trouble with washing and drying yourself (all over) because of your hip?",
+      "type": "choice",
+      "options": {
+        "reference": "ValueSet/SMART-PROMs-VS20"
+      }
+    },
+    {
+      "linkId": "Transportation",
+      "text": "Have you had any trouble getting in and out of a car or using public transportation because of your hip?",
+      "type": "choice",
+      "options": {
+        "reference": "ValueSet/SMART-PROMs-VS20"
+      }
+    },
+    {
+      "linkId": "Dressing",
+      "text": "Have you been able to put on a pair of socks, stockings or tights?",
+      "type": "choice",
+      "options": {
+        "reference": "ValueSet/SMART-PROMs-VS18"
+      }
+    },
+    {
+      "linkId": "Shopping",
+      "text": "Could you do the household shopping on your own?",
+      "type": "choice",
+      "options": {
+        "reference": "ValueSet/SMART-PROMs-VS18"
+      }
+    },
+    {
+      "linkId": "Walking",
+      "text": "For how long have you been able to walk before the pain in your hip becomes severe (with or without a walking aid)?",
+      "type": "choice",
+      "options": {
+        "reference": "ValueSet/SMART-PROMs-VS17"
+      }
+    },
+    {
+      "linkId": "Limping",
+      "text": "Have you been limping when walking because of your hip?",
+      "type": "choice",
+      "options": {
+        "reference": "ValueSet/SMART-PROMs-VS16"
+      }
+    },
+    {
+      "linkId": "Stairs",
+      "text": "Have you been able to climb a flight of stairs?",
+      "type": "choice",
+      "options": {
+        "reference": "ValueSet/SMART-PROMs-VS18"
+      }
+    },
+    {
+      "linkId": "Standing up",
+      "text": "After a meal (sat at a table), how painful has it been for you to stand up from a chair because of your hip?",
+      "type": "choice",
+      "options": {
+        "reference": "ValueSet/SMART-PROMs-VS19"
+      }
+    },
+    {
+      "linkId": "Usual work",
+      "text": "How much has pain from your hip interfered with your usual work, including housework?",
+      "type": "choice",
+      "options": {
+        "reference": "ValueSet/SMART-PROMs-VS21"
+      }
+    },
+    {
+      "linkId": "Score",
+      "text": "Your Oxford Hip Score is",
+      "type": "integer"
+    }
+  ]
+}
