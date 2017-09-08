@@ -1,0 +1,73 @@
+{
+   "copyright":"copyright 2008-2016 PROMIS Health Organization and PROMIS Cooperative Group",
+   "status":"active",
+   "publisher":"PROMIS Health Organization and PROMIS Cooperative Group",
+   "resourceType":"Questionnaire",
+   "id":"NQEMNped41internal",
+   "subjectType":[
+      "Patient"
+   ],
+   "item":[
+      {
+         "linkId":"B9FBDB28-5ABB-4265-A399-B7121F4A6DA4",
+         "type":"group",
+         "item":[
+            {
+               "type":"display",
+               "text":"En los últimos 7 días",
+               "linkId":"8AB8BA58-3BB0-40B6-B656-C24F1169069B"
+            },
+            {
+               "options":{
+                  "reference":"#B9FBDB28-5ABB-4265-A399-B7121F4A6DA4"
+               },
+               "type":"choice",
+               "text":"Sentí que todo me salía mal en la vida",
+               "linkId":"023FBF10-74CC-499A-898E-164CCE0264BA"
+            }
+         ]
+      }
+   ],
+   "contained":[
+      {
+         "status":"active",
+         "name":"Name of These Keys",
+         "resourceType":"ValueSet",
+         "id":"B9FBDB28-5ABB-4265-A399-B7121F4A6DA4",
+         "compose":{
+            "include":[
+               {
+                  "concept":[
+                     {
+                        "id":"E14DC85B-35E2-41AE-995B-2ECE301977C6",
+                        "code":"1",
+                        "display":"Nunca"
+                     },
+                     {
+                        "id":"97546644-4029-4AA2-9A1A-C60A85DE466A",
+                        "code":"2",
+                        "display":"Casi nunca"
+                     },
+                     {
+                        "id":"38EA24B4-227B-4C5E-8170-DF853B8DB5A8",
+                        "code":"3",
+                        "display":"A veces"
+                     },
+                     {
+                        "id":"29358389-218A-4660-994F-7ACF5370B8CD",
+                        "code":"4",
+                        "display":"A menudo"
+                     },
+                     {
+                        "id":"890B957A-3D94-4ADC-B9BD-7690BB9E59EC",
+                        "code":"5",
+                        "display":"Casi siempre"
+                     }
+                  ],
+                  "system":"https:\/\/systemofanswers.org\/asdf\/asdf\/sf\/"
+               }
+            ]
+         }
+      }
+   ]
+}
