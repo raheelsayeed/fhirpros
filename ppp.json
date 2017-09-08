@@ -1,61 +1,169 @@
 {
-  "copyright" : "copyright 2008-2016 PROMIS Health Organization and PROMIS Cooperative Group",
-  "publisher" : "PROMIS Health Organization and PROMIS Cooperative Group",
-  "status" : "draft",
-  "resourceType" : "Questionnaire",
-  "id" : "NQSCLped30internal",
-  "contained" : [
-    {
-      "name" : "Name of These Keys",
-      "status" : "active",
-      "resourceType" : "ValueSet",
-      "id" : "04173A8C-3626-4B7C-8B5D-1818961D66B4",
-      "compose" : {
-        "include" : [
-          {
-            "concept" : [
-              {
-                "code" : "1",
-                "display" : "Nunca"
-              },
-              {
-                "code" : "2",
-                "display" : "Casi nunca"
-              },
-              {
-                "code" : "3",
-                "display" : "A veces"
-              },
-              {
-                "code" : "4",
-                "display" : "A menudo"
-              },
-              {
-                "code" : "5",
-                "display" : "Casi siempre"
-              }
-            ],
-            "system" : "https:\/\/systemofanswers.org\/asdf\/asdf\/sf\/"
-          }
-        ]
-      }
-    }
-  ],
-  "item" : [
-    {
-      "linkId" : "04173A8C-3626-4B7C-8B5D-1818961D66B4",
-      "item" : [
-        {
-          "options" : {
-            "reference" : "#04173A8C-3626-4B7C-8B5D-1818961D66B4"
-          },
-          "linkId" : "F7541E33-D7CE-4D4D-8B3D-954E3542B935",
-          "text" : "Me sentí a gusto hablando con mis amigos\/as",
-          "type" : "choice"
-        }
-      ],
-      "type" : "group"
-    }
-  ],
-  "date" : "2012-03-11"
+	"resourceType": "Questionnaire",
+	"id": "choices",
+	"status": "draft",
+	"title": "This survey contains samples to show how choices in FHIR Questionnaires translate to ResearchKit surveys",
+	"date": "2016-04-11",
+	"item": [
+		{
+			"linkId": "group-0",
+			"type": "group",
+			"item": [
+				{
+					"linkId": "choice-valueSet",
+					"options": {
+						"reference": "#SF36Answers3"
+					},
+					"text": "A Simple Choice",
+					"type": "choice",
+					"extension": [
+						{
+							"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-instruction",
+							"valueString": "A “choice” question with possible answers in a referenced ValueSet"
+						}
+					]
+				},
+				{
+					"linkId": "choice-valueSet-multi",
+					"options": {
+						"reference": "#insuranceNameOptions"
+					},
+					"text": "Multiple Choice",
+					"type": "choice",
+					"repeats": true,
+					"extension": [
+						{
+							"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-instruction",
+							"valueString": "A “choice” question, with “repeats” true to allow multiple choice, possible answers in a referenced ValueSet"
+						}
+					]
+				},
+				{
+					"linkId": "choice-picker",
+					"options": {
+						"reference": "#SF36Answers3"
+					},
+					"text": "Simple Choice Picker",
+					"type": "choice",
+					"extension": [
+						{
+							"url": "http://fhir-registry.smarthealthit.org/StructureDefinition/value-picker",
+							"valueBoolean": true
+						},
+						{
+							"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-instruction",
+							"valueString": "A “choice” question, same as in step 1, but this time presented in a value picker"
+						}
+					]
+				},
+				{
+					"linkId": "choice-boolean-1",
+					"required": true,
+					"text": "Skip the Last Question?",
+					"type": "boolean"
+				},
+				{
+					"linkId": "choice-boolean-2",
+					"enableWhen": [
+						{
+							"question": "choice-boolean-1",
+							"answerBoolean": false
+						}
+					],
+					"required": true,
+					"text": "Unskippable Yes/No question",
+					"type": "boolean",
+					"extension": [
+						{
+							"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-instruction",
+							"valueString": "And it has this additional instructional text."
+						}
+					]
+				}
+			]
+		},
+		{
+			"linkId": "final",
+			"text": "Final Step",
+			"type": "display",
+			"extension": [
+				{
+					"url": "http://hl7.org/fhir/StructureDefinition/questionnaire-instruction",
+					"valueString": "Pressing “Done” will complete this survey."
+				}
+			]
+		}
+	],
+	"contained": [
+		{
+			"id": "SF36Answers3",
+			"resourceType": "ValueSet",
+			"compose": {
+				"include": [
+					{
+						"concept": [
+							{
+								"code": "1",
+								"display": "Yes, limited a lot"
+							},
+							{
+								"code": "2",
+								"display": "Yes, limited a little"
+							},
+							{
+								"code": "3",
+								"display": "No, not limited at all"
+							}
+						],
+						"system": "http://sf-36.org/fhir/StructureDefinition/answers-3-levels"
+					}
+				]
+			},
+			"name": "SF-36 Physical Functioning Subscale answers",
+			"status": "active"
+		},
+		{
+			"id": "insuranceNameOptions",
+			"resourceType": "ValueSet",
+			"compose": {
+				"include": [
+					{
+						"concept": [
+							{
+								"code": "medicare",
+								"display": "Medicare"
+							},
+							{
+								"code": "medicaid",
+								"display": "Medicaid"
+							},
+							{
+								"code": "aetna",
+								"display": "Aetna"
+							},
+							{
+								"code": "blue-cross-blue-shield",
+								"display": "Blue Cross Blue Shield"
+							},
+							{
+								"code": "cigna",
+								"display": "Cigna"
+							},
+							{
+								"code": "humana",
+								"display": "Humana"
+							},
+							{
+								"code": "other",
+								"display": "Other"
+							}
+						],
+						"system": "http://c3-pro.chip.org/fhir/ValueSet/insurance"
+					}
+				]
+			},
+			"name": "Known insurance institutions",
+			"status": "active"
+		}
+	]
 }
