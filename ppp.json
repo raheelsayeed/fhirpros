@@ -51,11 +51,6 @@
       "linkId" : "04173A8C-3626-4B7C-8B5D-1818961D66B4",
       "item" : [
         {
-          "linkId" : "8AB8BA58-3BB0-40B6-B656-C24F1169069B",
-          "text" : "En los últimos 7 días",
-          "type" : "display"
-        },
-        {
           "options" : {
             "reference" : "#04173A8C-3626-4B7C-8B5D-1818961D66B4"
           },
