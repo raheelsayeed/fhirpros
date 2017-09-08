@@ -2,41 +2,41 @@
   "publisher" : "PROMIS Health Organization and PROMIS Cooperative Group",
   "status" : "draft",
   "resourceType" : "Questionnaire",
-  "id" : "NQSCLped30internal",
+  "id" : "EDANX53internal",
   "contained" : [
     {
       "name" : "Name of These Keys",
       "status" : "active",
       "resourceType" : "ValueSet",
-      "id" : "04173A8C-3626-4B7C-8B5D-1818961D66B4",
+      "id" : "9FF359C0-4E7E-4D4E-BA75-8F3F6D378747",
       "compose" : {
         "include" : [
           {
             "concept" : [
               {
-                "id" : "FDAD4A05-92AD-4AEF-900C-C3B3D5EE9A20",
+                "id" : "348E810B-DB5F-450D-84E7-C84880458C4E",
                 "code" : "1",
-                "display" : "Nunca"
+                "display" : "Never"
               },
               {
-                "id" : "8440895E-7EB5-4127-BF4B-47C251866119",
+                "id" : "61ABA23E-74A8-4520-9288-7C01E58569EE",
                 "code" : "2",
-                "display" : "Casi nunca"
+                "display" : "Rarely"
               },
               {
-                "id" : "B0C5006B-DD5D-4EA4-B0CD-04BE41E0BDA8",
+                "id" : "4BBBC7BE-F263-40EC-9A37-516AB34D2115",
                 "code" : "3",
-                "display" : "A veces"
+                "display" : "Sometimes"
               },
               {
-                "id" : "78FD1DF3-D8AE-45BC-822F-500FE9A14E25",
+                "id" : "C5244728-E671-4707-9DDE-8DF218B0DCDE",
                 "code" : "4",
-                "display" : "A menudo"
+                "display" : "Often"
               },
               {
-                "id" : "44E77341-E16B-4CC7-8B11-18302CEA4398",
+                "id" : "F6B12417-B632-4B78-BD38-10401F44831E",
                 "code" : "5",
-                "display" : "Casi siempre"
+                "display" : "Always"
               }
             ],
             "system" : "https:\/\/systemofanswers.org\/asdf\/asdf\/sf\/"
@@ -47,19 +47,25 @@
   ],
   "item" : [
     {
-      "linkId" : "04173A8C-3626-4B7C-8B5D-1818961D66B4",
+      "linkId" : "9FF359C0-4E7E-4D4E-BA75-8F3F6D378747",
+      "code" : [
+        {
+          "code" : "EDANX53",
+          "system" : "https:\/\/linktothisspecificPROMIS.com\/1"
+        }
+      ],
       "item" : [
         {
           "linkId" : "8AB8BA58-3BB0-40B6-B656-C24F1169069B",
-          "text" : "En los últimos 7 días",
+          "text" : "In the past 7 days",
           "type" : "display"
         },
         {
           "options" : {
-            "reference" : "#04173A8C-3626-4B7C-8B5D-1818961D66B4"
+            "reference" : "#9FF359C0-4E7E-4D4E-BA75-8F3F6D378747"
           },
-          "linkId" : "F7541E33-D7CE-4D4D-8B3D-954E3542B935",
-          "text" : "Me sentí a gusto hablando con mis amigos\/as",
+          "linkId" : "19379073-AEAD-4C78-90A0-5E44038D5CAB",
+          "text" : "I felt uneasy",
           "type" : "choice"
         }
       ],
